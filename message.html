@@ -9,6 +9,9 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #ffe6f0;
+      /* Add the repeating heart emojis background */
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A5.4 5.4 0 0 1 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3A5.4 5.4 0 0 1 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23ff99cc' opacity='0.2'/></svg>");
+      background-size: 50px; /* Adjust the size of the emojis */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -20,13 +23,14 @@
       box-sizing: border-box;
     }
     .message-container {
-      background-color: #fff0f5; /* Light pink background */
+      background-color: rgba(255, 240, 245, 0.8); /* Light pink with transparency */
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       max-width: 600px;
       text-align: center;
       line-height: 1.6;
+      z-index: 1; /* Ensure the message container is on top of the background */
     }
     .message-container p {
       font-size: 1.2rem;
@@ -38,14 +42,16 @@
 <body>
   <div class="message-container">
     <p>
-Happy Birthday to FRIEND 😉. While it’s only been a short time, it feels like every moment I’ve spent with you has been filled with joy and excitement. 
-      
+Happy Birthday, Friend 😉. While it’s only been a short time, it feels like every moment I’ve spent with you has been filled with joy and excitement. 
 Today, on your special day, I want you to know just how much you mean to me already.
 Thank you for being you and for allowing me to be myself. Your Friendship has brought so much positivity and warmth into my life, and I am forever grateful for that. 
+
 As you celebrate another trip around the sun today, I hope this year brings you as much happiness, love, and adventure as you deserve. May all your dreams, big and small, come true. I look forward to supporting you in achieving every single one of them from afar.
+
 Here’s to a day filled with love, laughter, and everything you adore. I can’t wait to see what the future holds for you. I know it’s going to be something special! Enjoy every moment of your birthday, surrounded by the people who adore you as much as I do.
-Happy Birthday again! 🎂💖 Here’s to many more birthdays<br />
-And hey Friend.... 😉
+
+Happy Birthday again! 🎂💖 Here’s to many more birthdays!!!<br />
+
     </p>
   </div>
 </body>
