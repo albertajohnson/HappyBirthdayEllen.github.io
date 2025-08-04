@@ -3,54 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Birthday Message</title>
+  <title>Happy Birthday!</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffd6e7;
+      background-color: #ffe6f0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
       color: #4a2c2a;
-      padding: 2rem;
+      transition: background-color 0.5s ease;
     }
-    .message-container {
-      max-width: 700px;
+    .container {
       text-align: center;
-      background-color: #fff0f5;
-      border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
     p {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+    .button {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #ff99cc;
+      border: none;
+      color: white;
       font-size: 1.1rem;
-      line-height: 1.6;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none; /* Important for the link to not look like a regular link */
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #e68cbf;
     }
   </style>
 </head>
 <body>
-  <div class="message-container">
-    <h2>Your Birthday Message 💖</h2>
-    <p>
-      Happy Birthday to the most amazing FRIEND in the world. While it’s only been a short time, it feels like every moment I’ve spent with you has been filled with joy and excitement.
-    </p>
-    <p>
-      Today, on your special day, I want you to know just how much you mean to me already.
-      Thank you for being you and for allowing me to be myself. Your friendship has brought so much positivity and warmth into my life, and I am forever grateful for that.
-    </p>
-    <p>
-      As you celebrate another trip around the sun today, I hope this year brings you as much happiness, love, and adventure as you deserve. May all your dreams, big and small, come true. I look forward to supporting you in achieving every single one of them from afar.
-    </p>
-    <p>
-      Here’s to a day filled with love, laughter, and everything you adore. I can’t wait to see what the future holds for you. I know it’s going to be something special! Enjoy every moment of your birthday, surrounded by the people who adore you as much as I do.
-    </p>
-    <p>
-      Happy Birthday again! 🎂💖 Here’s to many more birthdays.<br />
-      And hey Friend... 😉
-    </p>
+  <div class="container">
+    <h1>Happy Birthday, Friend 😍 🎂💫</h1>
+    <p>A little something from afar… but just as heartfelt 💌</p>
+    <a class="button" href="message.html">Click Me 💖</a>
   </div>
 </body>
 </html>
