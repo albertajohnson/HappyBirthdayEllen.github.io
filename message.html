@@ -26,16 +26,28 @@
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 90%; /* Let the container take up to 90% of the screen width */
-      max-width: 600px; /* Set a maximum width so it doesn't get too wide on large screens */
+      width: 90%;
+      max-width: 600px; /* Default max-width for portrait/desktop */
       text-align: center;
       line-height: 1.6;
       z-index: 1;
     }
     .message-container p {
-      font-size: 1.1rem; /* Adjusting font size for better fit */
+      font-size: 1.1rem;
       text-align: left;
       white-space: pre-wrap;
+    }
+    
+    /* Media query for landscape orientation */
+    @media (orientation: landscape) {
+      .message-container {
+        /* On landscape, make the container wider */
+        max-width: 800px;
+      }
+      .message-container p {
+        /* You can also adjust the font size for landscape */
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
