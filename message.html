@@ -57,6 +57,7 @@
         opacity: 0;
         transform: rotate(45deg);
         animation: confetti-fall 3s ease-out forwards;
+        z-index: 100; /* Ensure confetti is on top of the message */
     }
     
     /* Animation for the confetti */
@@ -76,7 +77,7 @@
   <div class="message-container">
     <p>
       Happy Birthday, FRIEND 😉. While it’s only been a short time, it feels like every moment I’ve spent with you has been filled with joy and excitement. 
-      
+
       Today, on your special day, I want you to know just how much you mean to me already.
       Thank you for being you and for allowing me to be myself. Your Friendship has brought so much positivity and warmth into my life, and I am forever grateful for that. 
 
@@ -104,8 +105,8 @@
         }
     }
 
-    // Trigger the confetti when the page loads
-    window.addEventListener('load', createConfetti);
+    // This will start the confetti after a 4-second delay, so your friend has time to read the message.
+    setTimeout(createConfetti, 4000); 
   </script>
 </body>
 </html>
