@@ -20,6 +20,7 @@
       transition: background-color 0.5s ease;
       padding: 2rem;
       box-sizing: border-box;
+      position: relative; /* Needed for positioning the music button */
     }
     .message-container {
       background-color: rgba(255, 240, 245, 0.8);
@@ -49,26 +50,44 @@
 
     /* Style for the confetti particles */
     .confetti {
-        position: fixed;
-        width: 10px;
-        height: 10px;
-        background-color: #ff99cc; /* Confetti color */
-        top: -10px;
-        opacity: 0;
-        transform: rotate(45deg);
-        animation: confetti-fall 5s linear forwards;
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #ff99cc;
+      top: -10px;
+      opacity: 0;
+      transform: rotate(45deg);
+      animation: confetti-fall 5s linear forwards;
     }
     
-    /* Animation for the confetti */
     @keyframes confetti-fall {
-        0% {
-            transform: translateY(-10px) rotate(45deg);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(100vh) rotate(500deg);
-            opacity: 0;
-        }
+      0% {
+        transform: translateY(-10px) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(500deg);
+        opacity: 0;
+      }
+    }
+
+    /* New styles for the music button */
+    .music-link {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 0.75rem 1.5rem;
+        background-color: #ff99cc;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: background-color 0.3s;
+        z-index: 2;
+    }
+    .music-link:hover {
+        background-color: #e68cbf;
     }
   </style>
 </head>
@@ -89,26 +108,27 @@
     </p>
   </div>
 
+  <a href="music.html" class="music-link">Listen to me!</a>
+
   <script>
     function createConfetti() {
-        const colors = ['#ff99cc', '#e68cbf', '#b36b8c', '#ffb3d9']; // Confetti colors
+      const colors = ['#ff99cc', '#e68cbf', '#b36b8c', '#ffb3d9'];
+      const confettiCount = 5;
         
-        // Create a single confetti particle
+      for (let i = 0; i < confettiCount; i++) {
         const confetti = document.createElement('div');
         confetti.classList.add('confetti');
         confetti.style.left = Math.random() * 100 + 'vw';
         confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.animationDuration = Math.random() * 3 + 4 + 's'; // Varies the fall speed
+        confetti.style.animationDuration = Math.random() * 3 + 4 + 's';
         document.body.appendChild(confetti);
 
-        // Remove the confetti after its animation is done to keep the DOM clean
         confetti.addEventListener('animationend', () => {
-            confetti.remove();
+          confetti.remove();
         });
+      }
     }
-
-    // Call createConfetti repeatedly to create a continuous shower
-    setInterval(createConfetti, 100);
+    setInterval(createConfetti, 200);
   </script>
 </body>
 </html>
